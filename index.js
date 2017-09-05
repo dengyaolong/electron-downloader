@@ -2,6 +2,7 @@ const { dialog } = require('electron')
 const path = require('path')
 const platform = require('os').platform()
 
+// example looks: https://github.com/dengyaolong/electron-downloader/tree/master/example
 module.exports = function download(win, url, opts = {}) {
     win.webContents.session.once('will-download', function onDownload (e, item) {
         if (opts.saveAs && platform === 'darwin') {
