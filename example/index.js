@@ -30,7 +30,9 @@ const createWindow = () => {
     });
     mainWindow.once('ready-to-show', () => {
         let download = require('..')
-        download(mainWindow, 'http://7tebxh.com1.z0.glb.clouddn.com/dunk.png', {saveAs: true})
+        download(mainWindow, 'http://7tebxh.com1.z0.glb.clouddn.com/dunk.png', {
+            dir: '/tmp'
+        })
         mainWindow.show()
     });
 };
